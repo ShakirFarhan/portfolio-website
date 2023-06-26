@@ -9,6 +9,9 @@ function GradientText({ text, className, style, tag }) {
   return (
 
     <Tag className={className} style={mergedStyle}>
+      {
+        tag === "span" ? <br /> : ""
+      }
       {text}
     </Tag >
   )

@@ -9,10 +9,13 @@ function Separator() {
 
         />
         <h6 className='font-bold text-[16.4px] text-[var(--black-secondary)]'>Develope</h6>
+
+
         <GiStarShuriken
           className='min-w-[30px] h-[30px] fill-[#FF5E69]'
 
         />
+
         <h6 className='font-bold text-[16.4px] text-[var(--black-secondary)]'>Discover</h6>
         <GiStarShuriken
           className='min-w-[30px] h-[30px] fill-[#FF5E69]'
