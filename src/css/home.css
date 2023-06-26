@@ -1,0 +1,39 @@
+.project-info {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+.group:hover {
+  cursor: pointer;
+}
+
+.group:hover .project-info {
+  opacity: 1;
+}
+.gitintouchBTN {
+  background: linear-gradient(
+    to right,
+    #b16cea 1%,
+    #ff5e69 71%,
+    #ff8a56 91%,
+    #ffa84b 100%
+  );
+  transition: 0.6s ease-in-out;
+  border: 1px solid transparent;
+}
+.gitintouchBTN:hover {
+  background: none;
+  border: 1px solid var(--white-primary);
+}
+.connectBTN {
+  transition: 0.6s ease-in-out;
+}
+.connectBTN:hover {
+  border: none;
+  background: linear-gradient(
+    to right,
+    #b16cea 1%,
+    #ff5e69 71%,
+    #ff8a56 91%,
+    #ffa84b 100%
+  );
+}
