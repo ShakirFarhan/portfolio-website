@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Separator from '../components/Separator'
 import "../css/home.css"
 import { FaPeopleArrows } from "react-icons/fa"
@@ -21,86 +21,73 @@ import mongodb from "../assets/mongodb.png"
 import postgres from "../assets/postgres.png"
 import ImageFrame from '../components/ImageFrame'
 import GradientText from '../components/GradientText'
+import ProjectCard from '../components/ProjectCard'
+import metadata from "../assets/metadata.svg"
+import chat from "../assets/chat.svg"
+import blog from "../assets/blog.svg"
+import nfclogo from "../assets/nfclogo.png"
+import ivoyantlogo from "../assets/ivoyant-logo.png"
+// import ivoyantlogo from "../assets/ivoyant-logo.png"
+import elitcelerlogo from "../assets/elitceler.svg"
+
+
+import youtube from "../assets/youtube.svg"
+import Expandable from '../components/Expandable'
+import { elitcelerInfo, ivoyantInfo, nfcInfo } from '../contants/info'
+import Contact from './Contact'
+import Blob from '../components/Blob'
+import ExperienceCard from '../components/ExperienceCard'
+import { BiLogoLinkedin } from "react-icons/bi"
+import Navbar from '../components/Navbar'
 function Home() {
+  const [mode, setMode] = useState("dark")
+
+  useEffect(() => {
+    document.body.className = mode + '-mode';
+  }, [mode]);
   return (
 
     <>
-      <div className='h-fit w-full flex md:flex-row flex-col items-center justify-between max-w-7xl px-4 sm:px-10 md:px-8 md:gap-x-0 lg:gap-x-10 md:mx-auto gap-y-6 md:gap-y-0'>
+      <Navbar setMode={setMode} mode={mode} />
+      <header className='hero-section'>
+        <div className='h-fit w-full flex md:py-7 md:flex-row flex-col items-center justify-between max-w-7xl px-4 pt-10 md:pt-0 sm:px-10 md:px-8 md:gap-x-0 gap-x-6 xl:gap-x-10 md:mx-auto gap-y-0 md:gap-y-0'>
 
-        <div className='w-[96%] md:w-[50%] flex flex-col gap-y-[20px] items-start sm:items-center justify-between md:items-start'>
-          <h1 className='text-[var(--white-primary)] font-bold tracking-[0.6px] text-[33px] sm:text-[40px] sm:text-center md:text-start md:text-[34px] lg:text-[40px] leading-[40px] md:leading-[36px] lg:leading-[54px]'>
+          <div className='w-[96%] md:w-[50%] flex flex-col gap-y-[20px] items-start sm:items-center justify-between md:items-start' data-aos="fade-up"
+            data-aos-duration="1000">
+            <h1 className='text-[var(--white-primary)] font-bold tracking-[0.6px] text-[33px] sm:text-[40px] sm:text-center md:text-start md:text-[30px] lg:text-[40px] leading-[39px] md:leading-[35px] lg:leading-[40px] md:leading-[36px] lg:leading-[54px]'>
 
-            <GradientText style={{ fontWeight: "700px" }} tag="h1" text="Hello, I am Shakir Farhan," />
+              <GradientText style={{ fontWeight: "700px" }} tag="h1" text="Hello, I am Shakir Farhan," />
 
-            Full stack developer based in India
-          </h1>
+              Full stack developer based in India
+            </h1>
 
-          <p className='text-[#eff1f4] text-[13.5px] font-medium tracking-wide sm:text-center md:text-start'>Printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap</p>
-          <div className='flex sm:gap-x-3 gap-y-3 sm:gap-y-0 flex-col sm:flex-row'>
-            <button className='gitintouchBTN px-6 py-3 rounded-[20px]  text-[var(--white-primary)] font-semibold tracking-[0.5px] text-[12px]'>GET IN TOUCH</button>
-            <button className='connectBTN px-6 py-3 rounded-[20px] border-[1px] border-[var(--white-secondary)] text-[var(--white-primary)] font-semibold tracking-[0.5px] text-[12px]'>VIEW ALL WORKS</button>
+            <p className='text-[#eff1f4] text-[13.5px] font-medium tracking-wide sm:text-center md:text-start'>Printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap</p>
+            <div className='flex sm:gap-x-3 gap-y-3 sm:gap-y-0 flex-col sm:flex-row'>
+              <a href='#contact' className='gitintouchBTN px-6 py-3 rounded-[20px]  text-[var(--white-primary)]  font-semibold tracking-[0.5px] text-[12px]'>GET IN TOUCH</a>
+              <button className='connectBTN px-6 py-3 rounded-[20px] border-[1px] border-[var(--white-secondary)] z-10 text-[var(--white-primary)] font-semibold tracking-[0.5px] text-[12px] hover:transform'>SEE MY RESUME</button>
 
+            </div>
+          </div>
+          <div className='sm:w-[70%] md:w-[40%] flex items-start md:items-center justify-center' data-aos="fade-left"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="500"
+            data-aos-duration="500">
+            <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_IhrJN647CW.json" speed="1" className='h-[340px] sm:h-[400px] sm:w-[55%] md:w-fit hero-image' loop autoplay></lottie-player>
+            {/* <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_GzO3C7IclH.json" background="transparent" speed="1" className='h-[340px] sm:h-[200px] sm:w-[55%] md:w-fit' loop autoplay></lottie-player> */}
           </div>
         </div>
-        <div className='w-[100%] md:w-[40%] flex items-start md:items-center justify-center'>
-          <img className='h-[340px] sm:h-[400px] sm:w-[55%] md:w-fit' src='https://media.istockphoto.com/id/1200677760/photo/portrait-of-handsome-smiling-young-man-with-crossed-arms.jpg?s=612x612&w=0&k=20&c=g_ZmKDpK9VEEzWw4vJ6O577ENGLTOcrvYeiLxi8mVuo=' alt="Profile" />
-        </div>
-      </div>
+      </header>
       {/*  */}
       <Separator />
-      {/*  */}
-      <div className='md:mx-auto max-w-7xl pt-20 px-4 sm:px-10 md:px-8'>
-
-        <GradientText className="font-bold tracking-[0.6px] text-[33px] md:text-[40px] leading-[33px] sm:leading-0 pb-5" style={{ fontWeight: "700", background: "linear-gradient(to right, #B16CEA 0%, #FF5E69 20%, #FF8A56 30%, #FFA84B 250%)" }} text="Selected Projects" />
-        <p className='text-[#f0f2f5] text-[13.5px] font-medium tracking-wide w-[94%] md:w-[45%] lg:w-[35%]'>Printer took a galley of type and scrambled it to make a type specimen book. It has survived</p>
-        <div className='pt-9 flex flex-col gap-y-[40px]'>
-          <div className="relative group">
-            <img
-              className="w-full h-[400px] object-cover project-img"
-              src="https://images.alphacoders.com/598/598378.jpg"
-              alt="project-1"
-            />
-            <div className="absolute bottom-4 left-4 flex flex-col items-start gap-y-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-              <h4 className="text-[30px] font-bold tracking-wide text-[var(--white-secondary)]">Project Name</h4>
-              <h6 className="font-semibold text-[17px] text-[var(--white-secondary)] tracking-wide">Technology</h6>
-              <div className="flex items-center gap-x-4">
-                <button className="px-6 py-2 rounded-[20px] border-[1px] border-[var(--white-secondary)] text-[var(--white-primary)] font-semibold tracking-[0.5px] text-[12px]">Hosted Site</button>
-                <button className="px-6 py-2 rounded-[20px] border-[1px] border-[var(--white-secondary)] text-[var(--white-primary)] font-semibold tracking-[0.5px] text-[12px]">Github</button>
-                <button className="px-6 py-2 rounded-[20px] border-[1px] border-[var(--white-secondary)] text-[var(--white-primary)] font-semibold tracking-[0.5px] text-[12px]">Youtube Demo</button>
-              </div>
-            </div>
-          </div>
-
-
-          <div className="relative group">
-            <img
-              className="w-full h-[400px] object-cover project-img"
-              src="https://img1.wallspic.com/crops/1/8/6/1/4/141681/141681-sky-atmosphere-night-landscape-glacier-4000x2666.jpg"
-              alt="project-1"
-            />
-            <div className="absolute bottom-4 left-4 flex flex-col items-start gap-y-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-              <h4 className="text-[30px] font-bold tracking-wide text-[var(--white-secondary)]">Project Name</h4>
-              <h6 className="font-semibold text-[17px] text-[var(--white-secondary)] tracking-wide">Technology</h6>
-              <div className="flex items-center gap-x-4">
-                <button className="px-6 py-2 rounded-[20px] border-[1px] border-[var(--white-secondary)] text-[var(--white-primary)] font-semibold tracking-[0.5px] text-[12px]">Hosted Site</button>
-                <button className="px-6 py-2 rounded-[20px] border-[1px] border-[var(--white-secondary)] text-[var(--white-primary)] font-semibold tracking-[0.5px] text-[12px]">Github</button>
-                <button className="px-6 py-2 rounded-[20px] border-[1px] border-[var(--white-secondary)] text-[var(--white-primary)] font-semibold tracking-[0.5px] text-[12px]">Youtube Demo</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/*  */}
-      <div className='mx-auto max-w-7xl pt-20 flex flex-col md:flex-row justify-start  md:items-center md:justify-between px-4 sm:px-10 md:px-8'  >
-        <div className='flex flex-col items-start gap-y-2 md:gap-y-3 pb-6 md:w-[30%] lg:w-[35%] xl:w-[40%] md:pb-0'>
+      <section className='mx-auto max-w-7xl pt-20 flex flex-col md:flex-row justify-start  md:items-center md:justify-between px-4 sm:px-10 md:px-8'>
+        <div className='flex flex-col items-start gap-y-2 md:gap-y-3 pb-6 md:w-[30%] lg:w-[35%] xl:w-[40%] md:pb-0' >
 
           <GradientText tag="h6" style={{ fontWeight: "700", fontSize: "18px", letterSpacing: "0.6px" }} text="Shakir Farhan" />
           <h3 className='font-bold text-[26px] tracking-wide text-[var(--white-primary)]'>Full Stack Developer </h3>
         </div>
         <div className='md:w-[70%] lg:w-[60%] xl:w-[52%] flex flex-col gap-y-5'>
-          <p className='text-[var(--white-primary)] text-[16.5px] font-semibold tracking-wide'>Printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap</p>
-          <p className='text-[var(--white-primary)] text-[11.5px] font-medium tracking-wide'>Printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap</p>
+          <p className='text-[var(--white-primary)] text-[16.5px] font-semibold tracking-wide'>I am a Full Stack developer, whose passionate about developing strong and engaging web and mobile applications.</p>
+          <p className='text-[var(--white-primary)] text-[11.5px] font-medium tracking-wide'>Along with that, I am an active participant in communities as a lead and member. Because I think it's important to share knowledge and learn from others, I've been able to keep up with the most recent business trends and best practises.</p>
           <div className='flex flex-col items-start gap-y-3 sm:flex-row sm:items-center sm:gapy-0 sm:gap-x-16'>
             <div>
 
@@ -124,11 +111,11 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
       {/*  */}
-      <div className='mx-auto max-w-7xl pt-20 px-4 sm:px-10 md:px-8'>
+      <section className='mx-auto max-w-7xl pt-20 px-4 sm:px-10 md:px-8'>
         <h2 className='text-[30px] text-[var(--white-primary)] font-bold tracking-wider'>What I do.</h2>
-        <div className='pt-5'>
+        <div className='pt-5' data-aos="fade-right" id='skills'>
 
           <GradientText tag="h5" style={{ fontWeight: "700", fontSize: "18px", letterSpacing: "0.6px" }} text="Frontend" />
 
@@ -148,7 +135,7 @@ function Home() {
           </div>
 
         </div>
-        <div className='pt-5 flex flex-col items-start md:items-center'>
+        <div className='pt-5 flex flex-col items-start md:items-center' data-aos="fade-down">
 
           <GradientText tag="span" style={{ fontWeight: "700", fontSize: "18px", letterSpacing: "0.6px" }} text="Backend & Databases" />
 
@@ -161,7 +148,7 @@ function Home() {
           </div>
 
         </div>
-        <div className='pt-5 flex flex-col items-start md:items-end'>
+        <div className='pt-5 flex flex-col items-start md:items-end' data-aos="fade-left">
           <GradientText tag="span" style={{ fontWeight: "700", fontSize: "18px", letterSpacing: "0.6px" }} text="Other" />
 
           <div className='flex flex-wrap gap-x-3 gap-y-3 md:gap-x-6 pt-5 md:gap-y-6'>
@@ -173,23 +160,66 @@ function Home() {
           </div>
 
         </div>
-      </div>
+      </section>
+      <section className='md:mx-auto max-w-7xl pt-20 px-4 sm:px-10 md:px-8' id='projects' data-aos="zoom-out-up">
+        <h2 className="font-bold tracking-[0.6px] text-[33px] md:text-[40px] leading-[33px] sm:leading-0 pb-5">
 
-      {/*  */}
-      <div className='mx-auto max-w-7xl py-20 relative'>
-        <div className='flex flex-col items-between items-between w-[90%] md:w-[75%] relative left-[4%] md:left-[12%] gap-y-5'>
+          <GradientText text="Selected Projects" tag="span" />
+        </h2>
+        <p className='text-[#f0f2f5] text-[13.5px] font-medium tracking-wide w-[94%] md:w-[45%] lg:w-[35%]'>Printer took a galley of type and scrambled it to make a type specimen book. It has survived</p>
 
-          <h2 className='text-[var(--white-primary)] font-bold tracking-wide text-[22px] sm:text-[26px] md:text-[30px] lg:text-[34px] xl:text-[40px]'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore explicabo laboriosam corporis quo est enim? Eligendi.
-          </h2>
+        <div className='pt-8 flex items-center gap-x-10 overflow-x-scroll project-section pl-2'>
+          <ProjectCard name="Youtube Clone" language="Javascript" className="bg-[#FFFF00]" info="A YouTube clone built using React JS, Redux, Tailwind CSS, and a Rapid API." image={youtube} link="https://github.com/ShakirFarhan/Youtube-Clone" />
+          <ProjectCard name="Real Time Chat Application" className="bg-[#FFFF00]" language="Javascript" info="The Real-Time Messaging App is a dynamic website built using the MERN stack, consisting of MongoDB, Express, React, and Node.js...." image={chat} link="https://github.com/ShakirFarhan/Realtime-Chat" />
+          <ProjectCard name="Blogging Website" language="Javascript" className="bg-[#FFFF00]" info="A comprehensive blogging website built using MERN Stack that includes all of the functionality that a modern blogging website should have..." image={blog} link="https://github.com/ShakirFarhan/Blogging-Website" />
+          <ProjectCard name="Metadata Extractor" language="Typescript" className="bg-[#0076c6]" info="The Database Metadata Extractor is a API that aims to simplify the process of querying data from Postgres databases. This project provides..." image={metadata} link="https://github.com/ShakirFarhan/Metadata-Extractor" />
+          <div className='flex items-center'>
+            <a className='text-[var(--white-primary)] text-center font-bold tracking-wide' target='_blank' href='https://github.com/ShakirFarhan?tab=repositories'>MORE PROJECTS</a>
+          </div>
+        </div>
+      </section>
 
-          <button className='flex items-center gap-x-1 relative w-fit text-[22px] sm:text-[26px] md:text-[30px] lg:text-[34px] xl:text-[40px]' style={{ background: "linear-gradient(to right, #B16CEA 1%, #FF5E69 71%, #FF8A56 91%, #FFA84B 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", fontWeight: "700" }}>
-            Let's Work Together <FaPeopleArrows className='min-w-[34px] h-[34px] fill-[#FF5E69]' />
-            <span className="absolute left-0 right-0 bottom-0 h-px bg-gradient-to-r from-[#B16CEA] via-[#FF5E69] to-[#FF8A56]"></span>
-          </button>
+
+      <section className='pt-10 md:mx-auto max-w-7xl px-4 sm:px-10 md:px-8' id='education' >
+        <div data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine">
+          <GradientText text="Education" className="tracking-wide font-bold text-[38px]" tag="span" />
+
+
+          <div className='flex flex-col-reverse md:flex-row jusitify-between items-center md:gap-x-3 lg:gap-x-14 pt-5 md:pt-0'>
+
+            <div className='flex flex-col gap-y-8 w-[100%] md:w-[65%] lg:w-[60%]' >
+              <Expandable name="Institute Of Aeronautical Engineering" role="B-TECH Computer Science" duration="2021-2025" />
+              <Expandable name="Narayan College" role="Intermediate MPC" duration="2019-2021" />
+            </div>
+            <div className='relative w-[100%] md:w-[400px] h-[320px] md:h-[370px]' data-aos="fade-left"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine">
+              <Blob className="absolute w-[440px] md:w-[550px] left-[60px] sm:left-[75px] -top-20 md:-top-28 md:-left-20" color1="#dba440" color2="#ef02ff" />
+              <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_TBKozE.json" background="transparent" speed="1" loop autoplay></lottie-player>
+            </div>
+          </div>
 
         </div>
-      </div>
+
+        <div data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom" id='experience'>
+
+          <GradientText text="Experience" className="tracking-wide font-bold text-[38px]" tag="span" />
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-3 mt-6 mb-10' >
+
+
+            <ExperienceCard role="Software Engineer Intern" duration="April 2023 - Present" color="#1E1E1E" points={ivoyantInfo} companyname="Ivoyant" companylogo={<img className='w-[120px] h-[120px] text-[#fff] p-4' src={ivoyantlogo} />} />
+            <ExperienceCard role="Full Stack Developer (Freelancer)" duration="June 2023 - Present" color="#22262a" points={elitcelerInfo} companyname="Elitceler" companylogo={<img className='w-[120px] h-[120px]' src={elitcelerlogo} />} />
+            <ExperienceCard role="Frontend Developer Intern (React JS)" duration="June 2022 - Dec 2022" color="#464646" points={nfcInfo} companyname="NFC Solutions" companylogo={<img className='w-[120px] h-[120px] text-[#fff]' src={nfclogo} />} />
+
+          </div>
+        </div>
+      </section>
+
+      <Contact />
     </>
 
   )

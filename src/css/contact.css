@@ -1,0 +1,14 @@
+.gradient-icon {
+  display: inline-block;
+}
+
+.gradient-icon svg {
+  fill: transparent;
+  background: linear-gradient(
+    to right,
+    #ff0000,
+    #00ff00
+  ); /* Replace with your desired gradient colors */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

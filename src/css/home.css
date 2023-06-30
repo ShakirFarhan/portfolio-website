@@ -1,3 +1,9 @@
+.hero-section {
+  background-image: url('../assets/hero-bg.jpg');
+  /* background-image: url('https://img.freepik.com/free-photo/space-galaxy-background_53876-93121.jpg?w=900&t=st=1688048888~exp=1688049488~hmac=b4227cd05dc675eb9b4c82edacb8175bc4149be80ebcb188fc20c0e1c79b63b2'); */
+  width: 100%;
+  background-size: cover;
+}
 .project-info {
   opacity: 0;
   transition: opacity 300ms;
@@ -17,18 +23,20 @@
     #ff8a56 91%,
     #ffa84b 100%
   );
-  transition: 0.6s ease-in-out;
+  transition: 0.2s ease-in-out;
   border: 1px solid transparent;
 }
 .gitintouchBTN:hover {
   background: none;
   border: 1px solid var(--white-primary);
+  transform: translateY(-3px);
 }
 .connectBTN {
-  transition: 0.6s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .connectBTN:hover {
   border: none;
+  transform: translateY(-3px);
   background: linear-gradient(
     to right,
     #b16cea 1%,
@@ -36,4 +44,7 @@
     #ff8a56 91%,
     #ffa84b 100%
   );
+}
+.project-section::-webkit-scrollbar {
+  display: none;
 }

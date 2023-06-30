@@ -1,0 +1,36 @@
+.border-rotate {
+  overflow: hidden;
+}
+.border-rotate:hover::before {
+  cursor: pointer;
+  position: absolute;
+  content: ' ';
+  height: 200px;
+  top: -50px;
+  width: 190px;
+
+  background: linear-gradient(
+    rgba(177, 108, 234, 1),
+    rgba(255, 94, 105, 1),
+    rgba(255, 138, 86, 1),
+    rgba(255, 168, 75, 1)
+  );
+  animation: animate 1.3s linear infinite;
+}
+.border-rotate:hover {
+  cursor: pointer;
+}
+.border-rotate::after {
+  content: ' ';
+  position: absolute;
+  inset: 2px;
+  background: var(--black-secondary);
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(350deg);
+  }
+}
