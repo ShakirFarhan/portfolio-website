@@ -1,4 +1,4 @@
-.border-rotate {
+/* .border-rotate {
   overflow: hidden;
 }
 .border-rotate:hover::before {
@@ -16,11 +16,12 @@
     rgba(255, 168, 75, 1)
   );
   animation: animate 1.3s linear infinite;
-}
+} */
 .border-rotate:hover {
   cursor: pointer;
+  /* background-color: var(--project-info); */
 }
-.border-rotate::after {
+/* .border-rotate::after {
   content: ' ';
   position: absolute;
   inset: 2px;
@@ -33,4 +34,4 @@
   100% {
     transform: rotate(350deg);
   }
-}
+} */

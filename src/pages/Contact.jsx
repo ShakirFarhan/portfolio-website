@@ -1,20 +1,16 @@
 import React, { useState } from 'react'
 import GradientText from '../components/GradientText'
 import { MdEmail } from "react-icons/md"
-import { BsTelephoneFill } from "react-icons/bs"
 import emailjs from '@emailjs/browser';
 import "../css/contact.css"
 import classNames from 'classnames'
-import FAQ from '../components/FAQ'
-import github from "../assets/github.svg"
+
 import farhan from "../assets/farhan2.jpg"
 
 import { useRef } from 'react';
 import { toast } from 'react-toastify';
-import { BiLogoLinkedin, BiLogoGithub, BiLogoInstagramAlt, BiLogoYoutube, BiLogoMedium } from "react-icons/bi"
-import { FiMail } from "react-icons/fi"
-import { FaLinkedin } from 'react-icons/fa';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { BiLogoLinkedin, BiLogoGithub, BiLogoYoutube, BiLogoMedium } from "react-icons/bi"
+
 const defaultFormValue = {
   name: "",
   email: "",
@@ -46,7 +42,7 @@ function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
     if (!formData.email.match(emailRegex)) {
       toast.warning("Enter a Valid Email!", {
         style: toastContainer
@@ -84,35 +80,34 @@ function Contact() {
           <div className='flex items-center gap-x-4'>
 
 
-            <a target='_blanck' href='https://www.linkedin.com/in/shak1rfarhan/' className='px-2 py-[7px] bg-[#0e76a9] rounded-[50%] duration-500 ease-in-out hover:cursor-pointer hover:bg-[#000]'>
+            <a target='_blanck' rel="noreferrer" href='https://www.linkedin.com/in/shak1rfarhan/' className='px-2 py-[7px] bg-[#0e76a9] rounded-[50%] duration-500 ease-in-out hover:cursor-pointer hover:bg-[#000]'>
 
               <BiLogoLinkedin className={socialsLogo} />
             </a>
-            <a target='_blanck' href='https://github.com/ShakirFarhan' className='px-2 py-[7px] bg-[#333333] rounded-[50%] duration-500 ease-in-out hover:cursor-pointer hover:bg-[#000]'>
+            <a target='_blanck' rel="noreferrer" href='https://github.com/ShakirFarhan' className='px-2 py-[7px] bg-[#333333] rounded-[50%] duration-500 ease-in-out hover:cursor-pointer hover:bg-[#000]'>
 
               <BiLogoGithub className={socialsLogo} />
             </a>
-            <a target='_blanck' href='https://www.youtube.com/channel/UCAM0o-CucW9kQIdpreiW2NA' className='px-2 py-[7px] bg-[#ea4335] rounded-[50%] duration-500 ease-in-out hover:cursor-pointer hover:bg-[#000]'>
+            <a target='_blanck' rel="noreferrer" href='https://www.youtube.com/channel/UCAM0o-CucW9kQIdpreiW2NA' className='px-2 py-[7px] bg-[#ea4335] rounded-[50%] duration-500 ease-in-out hover:cursor-pointer hover:bg-[#000]'>
               <BiLogoYoutube className="w-[30px] h-[30px] text-[#fff]" />
 
             </a>
-            <a target='_blanck' href='https://medium.com/@shakirfarhan28' className='px-2 py-[7px] bg-[#333333] rounded-[50%] duration-500 ease-in-out hover:cursor-pointer hover:bg-[#000]'>
+            <a target='_blanck' rel="noreferrer" href='https://medium.com/@shakirfarhan28' className='px-2 py-[7px] bg-[#333333] rounded-[50%] duration-500 ease-in-out hover:cursor-pointer hover:bg-[#000]'>
 
               <BiLogoMedium className={socialsLogo} />
             </a>
-            <a target='_blanck' href="mailto: shakirfarhan28@gmail.com" className='px-2 py-[7px] bg-[#ea4335] rounded-[50%] duration-500 ease-in-out hover:cursor-pointer hover:bg-[#000]'>
+            <a target='_blanck' rel="noreferrer" href="mailto: shakirfarhan28@gmail.com" className='px-2 py-[7px] bg-[#ea4335] rounded-[50%] duration-500 ease-in-out hover:cursor-pointer hover:bg-[#000]'>
               <MdEmail className={socialsLogo} />
 
             </a>
 
           </div>
         </div>
-        <div className='w-[250px] h-[240px] md:absolute md:right-0 md:-bottom-9'>
-          <img className='w-full h-full rounded-[50%] bg-[#fff] object-cover border-[10px] border-[#b16cea]' src={farhan} />
+        <div className='w-[250px] h-[240px] md:absolute md:right-0 md:-bottom-12'>
+          <img className='w-full h-full rounded-[50%] bg-[#fff] object-cover border-[10px] border-[#b16cea]' src={farhan} alt='Owner Profile' />
         </div>
       </div>
-      <section className='py-10 w-[100%] md:w-[65%] lg:w-[50%]' data-aos="fade-up"
-        data-aos-anchor-placement="top-bottom">
+      <section className='py-10 w-[100%] md:w-[65%] lg:w-[50%]'>
         <form className='flex flex-col gap-y-5' ref={form} onSubmit={sendEmail}>
           <div className={inputDiv}>
             <label className={label}>Your Name </label>

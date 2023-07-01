@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Separator from '../components/Separator'
 import "../css/home.css"
-import { FaPeopleArrows } from "react-icons/fa"
 import java from "../assets/java.png"
 import html from "../assets/html.png"
 import css from "../assets/css.png"
@@ -27,18 +26,16 @@ import chat from "../assets/chat.svg"
 import blog from "../assets/blog.svg"
 import nfclogo from "../assets/nfclogo.png"
 import ivoyantlogo from "../assets/ivoyant-logo.png"
-// import ivoyantlogo from "../assets/ivoyant-logo.png"
 import elitcelerlogo from "../assets/elitceler.svg"
-
-
 import youtube from "../assets/youtube.svg"
 import Expandable from '../components/Expandable'
 import { elitcelerInfo, ivoyantInfo, nfcInfo } from '../contants/info'
 import Contact from './Contact'
 import Blob from '../components/Blob'
 import ExperienceCard from '../components/ExperienceCard'
-import { BiLogoLinkedin } from "react-icons/bi"
 import Navbar from '../components/Navbar'
+import TopArrow from '../assets/TopArrow'
+import Footer from '../components/Footer'
 function Home() {
   const [mode, setMode] = useState("dark")
 
@@ -49,7 +46,7 @@ function Home() {
 
     <>
       <Navbar setMode={setMode} mode={mode} />
-      <header className='hero-section'>
+      <header className={`${mode === "dark" ? "hero-section" : ""}`}>
         <div className='h-fit w-full flex md:py-7 md:flex-row flex-col items-center justify-between max-w-7xl px-4 pt-10 md:pt-0 sm:px-10 md:px-8 md:gap-x-0 gap-x-6 xl:gap-x-10 md:mx-auto gap-y-0 md:gap-y-0'>
 
           <div className='w-[96%] md:w-[50%] flex flex-col gap-y-[20px] items-start sm:items-center justify-between md:items-start' data-aos="fade-up"
@@ -61,9 +58,9 @@ function Home() {
               Full stack developer based in India
             </h1>
 
-            <p className='text-[#eff1f4] text-[13.5px] font-medium tracking-wide sm:text-center md:text-start'>Printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap</p>
+            <p className='text-[var(--white-primary)] text-[13.5px] font-medium tracking-wide sm:text-center md:text-start'>If your Looking for a developer who can work on both web and app projects and is willing to try out new roles? or if you need a versatile and motivated developer, feel free to reach out to me.</p>
             <div className='flex sm:gap-x-3 gap-y-3 sm:gap-y-0 flex-col sm:flex-row'>
-              <a href='#contact' className='gitintouchBTN px-6 py-3 rounded-[20px]  text-[var(--white-primary)]  font-semibold tracking-[0.5px] text-[12px]'>GET IN TOUCH</a>
+              <a href='#contact' rel="noreferrer" className='gitintouchBTN px-6 py-3 rounded-[20px]  text-[var(--white-primary)]  font-bold tracking-[0.5px] text-[12px]'>GET IN TOUCH</a>
               <button className='connectBTN px-6 py-3 rounded-[20px] border-[1px] border-[var(--white-secondary)] z-10 text-[var(--white-primary)] font-semibold tracking-[0.5px] text-[12px] hover:transform'>SEE MY RESUME</button>
 
             </div>
@@ -73,19 +70,18 @@ function Home() {
             data-aos-offset="500"
             data-aos-duration="500">
             <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_IhrJN647CW.json" speed="1" className='h-[340px] sm:h-[400px] sm:w-[55%] md:w-fit hero-image' loop autoplay></lottie-player>
-            {/* <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_GzO3C7IclH.json" background="transparent" speed="1" className='h-[340px] sm:h-[200px] sm:w-[55%] md:w-fit' loop autoplay></lottie-player> */}
+
           </div>
         </div>
       </header>
-      {/*  */}
       <Separator />
       <section className='mx-auto max-w-7xl pt-20 flex flex-col md:flex-row justify-start  md:items-center md:justify-between px-4 sm:px-10 md:px-8'>
-        <div className='flex flex-col items-start gap-y-2 md:gap-y-3 pb-6 md:w-[30%] lg:w-[35%] xl:w-[40%] md:pb-0' >
+        <div className='flex flex-col items-start gap-y-2 md:gap-y-3 pb-6 md:w-[30%] lg:w-[35%] xl:w-[40%] md:pb-0' data-aos="fade-up-right">
 
           <GradientText tag="h6" style={{ fontWeight: "700", fontSize: "18px", letterSpacing: "0.6px" }} text="Shakir Farhan" />
           <h3 className='font-bold text-[26px] tracking-wide text-[var(--white-primary)]'>Full Stack Developer </h3>
         </div>
-        <div className='md:w-[70%] lg:w-[60%] xl:w-[52%] flex flex-col gap-y-5'>
+        <div className='md:w-[70%] lg:w-[60%] xl:w-[52%] flex flex-col gap-y-5' data-aos="fade-up-left">
           <p className='text-[var(--white-primary)] text-[16.5px] font-semibold tracking-wide'>I am a Full Stack developer, whose passionate about developing strong and engaging web and mobile applications.</p>
           <p className='text-[var(--white-primary)] text-[11.5px] font-medium tracking-wide'>Along with that, I am an active participant in communities as a lead and member. Because I think it's important to share knowledge and learn from others, I've been able to keep up with the most recent business trends and best practises.</p>
           <div className='flex flex-col items-start gap-y-3 sm:flex-row sm:items-center sm:gapy-0 sm:gap-x-16'>
@@ -94,14 +90,14 @@ function Home() {
 
               <GradientText tag="span" style={{ fontWeight: "700", fontSize: "12px", letterSpacing: "0.6px" }} text="PROJECTS DONE" />
 
-              <p className='font-bold text-[29px] text-[var(--white-primary)]'>15+</p>
+              <p className='font-bold text-[29px] text-[var(--white-primary)]'>14+</p>
             </div>
             <div>
 
 
               <GradientText tag="span" style={{ fontWeight: "700", fontSize: "12px", letterSpacing: "0.6px" }} text="EXPERIENCE" />
 
-              <p className='font-bold text-[29px] text-[var(--white-primary)]'>1+ Years</p>
+              <p className='font-bold text-[29px] text-[var(--white-primary)]'>1 Year</p>
             </div>
             <div>
 
@@ -162,19 +158,19 @@ function Home() {
         </div>
       </section>
       <section className='md:mx-auto max-w-7xl pt-20 px-4 sm:px-10 md:px-8' id='projects' data-aos="zoom-out-up">
-        <h2 className="font-bold tracking-[0.6px] text-[33px] md:text-[40px] leading-[33px] sm:leading-0 pb-5">
+        <h2 className="font-bold tracking-[0.6px] text-[33px] md:text-[40px] leading-[33px] sm:leading-0 pb-3 md:pl-2">
 
           <GradientText text="Selected Projects" tag="span" />
         </h2>
-        <p className='text-[#f0f2f5] text-[13.5px] font-medium tracking-wide w-[94%] md:w-[45%] lg:w-[35%]'>Printer took a galley of type and scrambled it to make a type specimen book. It has survived</p>
+        <p className='text-[#f0f2f5] text-[13.5px] font-medium tracking-wide w-[94%] md:w-[45%] lg:w-[35%] md:pl-2' >Printer took a galley of type and scrambled it to make a type specimen book. It has survived</p>
 
-        <div className='pt-8 flex items-center gap-x-10 overflow-x-scroll project-section pl-2'>
-          <ProjectCard name="Youtube Clone" language="Javascript" className="bg-[#FFFF00]" info="A YouTube clone built using React JS, Redux, Tailwind CSS, and a Rapid API." image={youtube} link="https://github.com/ShakirFarhan/Youtube-Clone" />
+        <div className='py-3 flex items-center gap-x-10 overflow-x-scroll project-section pl-2'>
           <ProjectCard name="Real Time Chat Application" className="bg-[#FFFF00]" language="Javascript" info="The Real-Time Messaging App is a dynamic website built using the MERN stack, consisting of MongoDB, Express, React, and Node.js...." image={chat} link="https://github.com/ShakirFarhan/Realtime-Chat" />
+          <ProjectCard name="Youtube Clone" language="Javascript" className="bg-[#FFFF00]" info="A YouTube clone built using React JS, Redux, Tailwind CSS, and a Rapid API." image={youtube} link="https://github.com/ShakirFarhan/Youtube-Clone" />
           <ProjectCard name="Blogging Website" language="Javascript" className="bg-[#FFFF00]" info="A comprehensive blogging website built using MERN Stack that includes all of the functionality that a modern blogging website should have..." image={blog} link="https://github.com/ShakirFarhan/Blogging-Website" />
           <ProjectCard name="Metadata Extractor" language="Typescript" className="bg-[#0076c6]" info="The Database Metadata Extractor is a API that aims to simplify the process of querying data from Postgres databases. This project provides..." image={metadata} link="https://github.com/ShakirFarhan/Metadata-Extractor" />
           <div className='flex items-center'>
-            <a className='text-[var(--white-primary)] text-center font-bold tracking-wide' target='_blank' href='https://github.com/ShakirFarhan?tab=repositories'>MORE PROJECTS</a>
+            <a className='text-[var(--white-primary)] text-center font-bold tracking-wide' target='_blank' rel="noreferrer" href='https://github.com/ShakirFarhan?tab=repositories'>MORE PROJECTS</a>
           </div>
         </div>
       </section>
@@ -211,15 +207,18 @@ function Home() {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-3 mt-6 mb-10' >
 
 
-            <ExperienceCard role="Software Engineer Intern" duration="April 2023 - Present" color="#1E1E1E" points={ivoyantInfo} companyname="Ivoyant" companylogo={<img className='w-[120px] h-[120px] text-[#fff] p-4' src={ivoyantlogo} />} />
-            <ExperienceCard role="Full Stack Developer (Freelancer)" duration="June 2023 - Present" color="#22262a" points={elitcelerInfo} companyname="Elitceler" companylogo={<img className='w-[120px] h-[120px]' src={elitcelerlogo} />} />
-            <ExperienceCard role="Frontend Developer Intern (React JS)" duration="June 2022 - Dec 2022" color="#464646" points={nfcInfo} companyname="NFC Solutions" companylogo={<img className='w-[120px] h-[120px] text-[#fff]' src={nfclogo} />} />
+            <ExperienceCard role="Software Engineer Intern" duration="April 2023 - Present" color="#1E1E1E" points={ivoyantInfo} companyname="Ivoyant" companylogo={<img className='w-[120px] h-[120px] text-[var(--white-secondary)] p-4' src={ivoyantlogo} alt='Company Logo' />} />
+            <ExperienceCard role="Full Stack Developer (Freelancer)" duration="June 2023 - Present" color="#22262a" points={elitcelerInfo} companyname="Elitceler" companylogo={<img className='w-[120px] h-[120px] text-[var(--white-secondary)]' src={elitcelerlogo} alt='Company Logo' />} />
+            <ExperienceCard role="Frontend Developer Intern (React JS)" duration="June 2022 - Dec 2022" color="#464646" points={nfcInfo} companyname="NFC Solutions" companylogo={<img className='w-[120px] h-[120px] text-[var(--white-secondary)]' src={nfclogo} alt='Company Logo' />} />
 
           </div>
         </div>
       </section>
 
       <Contact />
+      <TopArrow />
+
+      <Footer />
     </>
 
   )

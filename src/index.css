@@ -18,6 +18,11 @@ html {
   --white-primary: #f0f2f5;
   --white-secondary: #ffffff;
   --gradient: #b16cea - #ff5e69 - #ff8a56 - #ffa84b;
+  --project-card: #24221f;
+  --grey-primary: #808080;
+  --project-name: #d2d2d3;
+  --project-info: #a3a4a5;
+  --nav-hover: #161513;
 }
 .light-mode {
   --black-primary: #f0f2f5;
@@ -25,4 +30,8 @@ html {
   --white-primary: #161513;
   --white-secondary: #1c1c22;
   --gradient: #b16cea - #ff5e69 - #ff8a56 - #ffa84b;
+  --project-card: #fff;
+  --project-name: #161513;
+  --project-info: #868e96;
+  --nav-hover: #d3d3d3;
 }

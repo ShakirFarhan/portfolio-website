@@ -1,0 +1,22 @@
+.navbar,
+.sidebar {
+  background-image: url('../assets/hero-bg.jpg');
+  background-size: cover;
+}
+.logo-text {
+  font-family: 'Lobster', cursive;
+  color: var(--white-primary);
+  font-weight: 100;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.logo-sides {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white-primary);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
