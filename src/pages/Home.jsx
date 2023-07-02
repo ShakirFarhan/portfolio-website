@@ -50,8 +50,6 @@ function Home() {
 
     return () => clearTimeout(timer);
   }, []);
-
-
   useEffect(() => {
     document.body.className = mode + '-mode';
   }, [mode]);
@@ -76,7 +74,7 @@ function Home() {
                   <p className='text-[var(--white-primary)] text-[13.5px] font-medium tracking-wide sm:text-center md:text-start'>If your Looking for a developer who can work on both web and app projects and is willing to try out new roles? or if you need a versatile and motivated developer, feel free to reach out to me.</p>
                   <div className='flex sm:gap-x-3 gap-y-3 sm:gap-y-0 flex-col sm:flex-row'>
                     <a href='#contact' rel="noreferrer" className='gitintouchBTN px-6 py-3 rounded-[20px]  text-[var(--white-primary)]  font-bold tracking-[0.5px] text-[12px]'>GET IN TOUCH</a>
-                    <button className='connectBTN px-6 py-3 rounded-[20px] border-[1px] border-[var(--white-secondary)] z-10 text-[var(--white-primary)] font-semibold tracking-[0.5px] text-[12px] hover:transform'>SEE MY RESUME</button>
+                    <button className='connectBTN px-6 py-3 rounded-[20px] border-[1px] border-[var(--white-secondary)] z-10 text-[var(--white-primary)] font-semibold tracking-[0.5px] text-[12px] hover:transform'><a href="https://drive.google.com/file/d/1H3dZO7LBDjy1skcQhrYBL9WBLe46yn2m/view?usp=sharing" target='_blanck'>SEE MY RESUME</a></button>
 
                   </div>
                 </div>
@@ -89,6 +87,7 @@ function Home() {
                 </div>
               </div>
             </header>
+
             <Separator />
             <section className='mx-auto max-w-7xl pt-20 flex flex-col md:flex-row justify-start  md:items-center md:justify-between px-4 sm:px-10 md:px-8'>
               <div className='flex flex-col items-start gap-y-2 md:gap-y-3 pb-6 md:w-[30%] lg:w-[35%] xl:w-[40%] md:pb-0' data-aos="fade-up-right">

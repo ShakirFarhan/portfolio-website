@@ -9,7 +9,7 @@ function ExperienceCard({ color, companyname, companylogo, role, duration, point
       <div style={{ backgroundColor: color }} className={`h-[170px] bg-[${color}]`}>
 
       </div>
-      <div className='absolute top-7 left-[35%] sm:left-[38%] md:left-[31%] flex flex-col items-center gap-y-7 justify-between'>
+      <div className='absolute top-7 left-[32%] sm:left-[38%] md:left-[31%] flex flex-col items-center gap-y-7 justify-between'>
 
         <h3 className='text-[22px] font-bold text-[#fff]'>{companyname}</h3>
         <div style={{ boxShadow: "rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px", backgroundColor: color }} className={`bg-[${color}]  rounded-[50%] p-4 `}>

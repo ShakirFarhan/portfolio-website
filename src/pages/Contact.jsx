@@ -5,7 +5,10 @@ import emailjs from '@emailjs/browser';
 import "../css/contact.css"
 import classNames from 'classnames'
 
-import farhan from "../assets/farhan2.jpg"
+import farhan from "../assets/farhan.jpg"
+// import farhan from "../assets/me.jpg"
+
+
 
 import { useRef } from 'react';
 import { toast } from 'react-toastify';
