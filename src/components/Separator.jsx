@@ -8,7 +8,7 @@ function Separator() {
           className='min-w-[30px] h-[30px] fill-[#FF5E69]'
 
         />
-        <h6 className='font-bold text-[16.4px] text-[var(--black-secondary)]'>Develope</h6>
+        <h6 className='font-bold text-[16.4px] text-[var(--black-secondary)]'>Develop</h6>
 
 
         <GiStarShuriken
@@ -26,7 +26,7 @@ function Separator() {
           className='min-w-[30px] h-[30px] fill-[#FF5E69]'
 
         />
-        <h6 className='font-bold text-[16.4px] text-[var(--black-secondary)]'>Develope</h6>
+        <h6 className='font-bold text-[16.4px] text-[var(--black-secondary)]'>Develop</h6>
         <GiStarShuriken
           className='min-w-[30px] h-[30px] fill-[#FF5E69]'
 
@@ -41,7 +41,7 @@ function Separator() {
           className='min-w-[30px] h-[30px] fill-[#FF5E69]'
 
         />
-        <h6 className='font-bold text-[16.4px] text-[var(--black-secondary)]'>Develope</h6>
+        <h6 className='font-bold text-[16.4px] text-[var(--black-secondary)]'>Develop</h6>
         <GiStarShuriken
           className='min-w-[30px] h-[30px] fill-[#FF5E69]'
 
@@ -56,7 +56,7 @@ function Separator() {
           className='min-w-[30px] h-[30px] fill-[#FF5E69]'
 
         />
-        <h6 className='font-bold text-[16.4px] text-[var(--black-secondary)]'>Develope</h6>
+        <h6 className='font-bold text-[16.4px] text-[var(--black-secondary)]'>Develop</h6>
         <GiStarShuriken
           className='min-w-[30px] h-[30px] fill-[#FF5E69]'
 
