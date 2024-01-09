@@ -37,6 +37,7 @@ import Navbar from '../components/Navbar'
 import TopArrow from '../assets/TopArrow'
 import Footer from '../components/Footer'
 import Loading from '../components/Loading'
+import EducationCard from '../components/EducationCard'
 function Home() {
   const [mode, setMode] = useState("dark")
   const [isLoading, setIsLoading] = useState(true);
@@ -190,29 +191,12 @@ function Home() {
             </section>
 
 
-            <section className='pt-10 md:mx-auto max-w-7xl px-4 sm:px-10 md:px-8' id='education' >
-              <div data-aos="fade-right"
-                data-aos-offset="300"
-                data-aos-easing="ease-in-sine">
-                <GradientText text="Education" className="tracking-wide font-bold text-[38px]" tag="span" />
+            <section className='pt-10 md:mx-auto max-w-7xl px-4 sm:px-10 md:px-8 grid gap-y-4 grid-cols-1 md:grid-cols-2 gap-x-4' id='education' >
+              <EducationCard duration="2021-2025" type="Graduation" degree="Bachelor's Degree" degreeType="B-Tech" course="Computer Science Engineering" schoolName="Institute of Aeronautical Engineering" schoolLocation="Hyderabad, Telangana, India" cardType={1} />
+              <EducationCard duration="2019-2021" type="Intermediate" course="Science (MPC)" schoolName="Narayana Junior College" schoolLocation="Hyderabad, Telangana, India" cardType={2} />
+            </section>
 
-
-                <div className='flex flex-col-reverse md:flex-row jusitify-between items-center md:gap-x-3 lg:gap-x-14 pt-5 md:pt-0'>
-
-                  <div className='flex flex-col gap-y-8 w-[100%] md:w-[65%] lg:w-[60%]' >
-                    <Expandable name="Institute Of Aeronautical Engineering" role="B-TECH Computer Science" duration="2021-2025" />
-                    <Expandable name="Narayan College" role="Intermediate MPC" duration="2019-2021" />
-                  </div>
-                  <div className='relative w-[100%] md:w-[400px] h-[320px] md:h-[370px]' data-aos="fade-left"
-                    data-aos-offset="300"
-                    data-aos-easing="ease-in-sine">
-                    <Blob className="absolute w-[440px] md:w-[550px] left-[60px] sm:left-[75px] -top-20 md:-top-28 md:-left-20" color1="#dba440" color2="#ef02ff" />
-                    <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_TBKozE.json" background="transparent" speed="1" loop autoplay></lottie-player>
-                  </div>
-                </div>
-
-              </div>
-
+            <section className='pt-10 md:mx-auto max-w-7xl px-4 sm:px-10 md:px-8'>
               <div data-aos="fade-up"
                 data-aos-anchor-placement="top-bottom" id='experience'>
 
@@ -229,9 +213,10 @@ function Home() {
               </div>
             </section>
 
+
+
             <Contact />
             <TopArrow />
-
             <Footer />
 
           </>
