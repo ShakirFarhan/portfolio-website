@@ -1,4 +1,9 @@
-.education__card {
-  background: rgb(250, 234, 191);
+.hover__card {
   background: radial-gradient(circle, rgba(250, 234, 191, 1) 0%, #c2c2c2 38%);
+  transition: background 1s all;
+  cursor: pointer;
+}
+
+.hover__card:hover {
+  background: #fff;
 }

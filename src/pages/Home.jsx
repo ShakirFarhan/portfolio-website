@@ -24,20 +24,15 @@ import ProjectCard from '../components/ProjectCard'
 import metadata from "../assets/metadata.svg"
 import chat from "../assets/chat.svg"
 import blog from "../assets/blog.svg"
-import nfclogo from "../assets/nfclogo.png"
-import ivoyantlogo from "../assets/ivoyant-logo.png"
-import elitcelerlogo from "../assets/elitceler.svg"
 import youtube from "../assets/youtube.svg"
-import Expandable from '../components/Expandable'
-import { elitcelerInfo, ivoyantInfo, nfcInfo } from '../contants/info'
+import { experiences } from '../constants/info'
 import Contact from './Contact'
-import Blob from '../components/Blob'
-import ExperienceCard from '../components/ExperienceCard'
 import Navbar from '../components/Navbar'
 import TopArrow from '../assets/TopArrow'
 import Footer from '../components/Footer'
 import Loading from '../components/Loading'
 import EducationCard from '../components/EducationCard'
+import ExperienceCard from '../components/Experience/ExperienceCard'
 function Home() {
   const [mode, setMode] = useState("dark")
   const [isLoading, setIsLoading] = useState(true);
@@ -196,25 +191,34 @@ function Home() {
                 <GradientText text="Education" className="tracking-wide font-bold text-[38px] text-center mb-6" tag="span" />
               </div>
               <div className='grid gap-y-4 grid-cols-1 md:grid-cols-2 gap-x-4'>
-
                 <EducationCard duration="2021-2025" type="Graduation" degree="Bachelor's Degree" degreeType="B-Tech" course="Computer Science Engineering" schoolName="Institute of Aeronautical Engineering" schoolLocation="Hyderabad, Telangana, India" cardType={1} />
                 <EducationCard duration="2019-2021" type="High School" degree="Intermediate" course="Science (MPC)" schoolName="Narayana Junior College" schoolLocation="Hyderabad, Telangana, India" cardType={2} />
               </div>
             </section>
 
-            <section className='pt-10 md:mx-auto max-w-7xl px-4 sm:px-10 md:px-8'>
+            <section className='pt-16 md:mx-auto max-w-7xl px-4 sm:px-10 md:px-8'>
               <div data-aos="fade-up"
                 data-aos-anchor-placement="top-bottom" id='experience'>
+                <div className='text-center'>
+                  <GradientText text="Experience" className="tracking-wide font-bold text-[38px]" tag="span" />
 
-                <GradientText text="Experience" className="tracking-wide font-bold text-[38px]" tag="span" />
+                </div>
+                <div className='mt-6 mb-10 flex flex-col gap-y-7' >
+                  {
+                    experiences.map((experience) => {
+                      return (
+                        <ExperienceCard
+                          company={experience.company}
+                          role={experience.role}
+                          duration={experience.duration}
+                          logo={experience.logo}
+                          description={experience.description}
+                          location={experience.location}
+                        />
 
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-3 mt-6 mb-10' >
-
-
-                  <ExperienceCard role="Software Engineer Intern" duration="April 2023 - Present" color="#1E1E1E" points={ivoyantInfo} companyname="Ivoyant" companylogo={<img className='w-[120px] h-[120px] text-[var(--white-secondary)] p-4' src={ivoyantlogo} alt='Company Logo' />} />
-                  <ExperienceCard role="Full Stack Developer (Freelancer)" duration="June 2023 - Present" color="#22262a" points={elitcelerInfo} companyname="Elitceler" companylogo={<img className='w-[120px] h-[120px] text-[var(--white-secondary)]' src={elitcelerlogo} alt='Company Logo' />} />
-                  <ExperienceCard role="Frontend Developer Intern (React JS)" duration="June 2022 - Dec 2022" color="#464646" points={nfcInfo} companyname="NFC Solutions" companylogo={<img className='w-[120px] h-[120px] text-[var(--white-secondary)]' src={nfclogo} alt='Company Logo' />} />
-
+                      )
+                    })
+                  }
                 </div>
               </div>
             </section>

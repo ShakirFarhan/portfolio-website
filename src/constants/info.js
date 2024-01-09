@@ -1,3 +1,6 @@
+import elitceler from '../assets/elitceler.svg';
+import ivoyant from '../assets/ivoyant-logo.png';
+import nfc from '../assets/nfclogo.png';
 export const nfcInfo = [
   {
     key: 1,
@@ -34,5 +37,35 @@ export const elitcelerInfo = [
   {
     key: 2,
     text: 'Leveraging expertise in front-end and back-end development to design and develop user-friendly interfaces and robust server-side functionalities.',
+  },
+];
+
+export const experiences = [
+  {
+    id: '1',
+    company: 'Eliceler Technologies',
+    logo: elitceler,
+    location: 'Hyderabad, Telangana, India',
+    role: 'Backend Developer',
+    duration: 'JULY 2023 - Present',
+    description: elitcelerInfo,
+  },
+  {
+    id: '2',
+    company: 'Ivoyant ',
+    logo: ivoyant,
+    location: 'bengaluru, Karnataka, India',
+    role: 'Software Engineer Intern',
+    duration: 'APR 2023 - AUG 2023',
+    description: ivoyantInfo,
+  },
+  {
+    id: '3',
+    company: 'NFC Solution',
+    logo: nfc,
+    location: 'Hyderabad, Telangana, India',
+    role: 'Front End Developer Intern',
+    duration: 'JUNE 2022 - DEC 2022',
+    description: nfcInfo,
   },
 ];
