@@ -191,9 +191,15 @@ function Home() {
             </section>
 
 
-            <section className='pt-10 md:mx-auto max-w-7xl px-4 sm:px-10 md:px-8 grid gap-y-4 grid-cols-1 md:grid-cols-2 gap-x-4' id='education' >
-              <EducationCard duration="2021-2025" type="Graduation" degree="Bachelor's Degree" degreeType="B-Tech" course="Computer Science Engineering" schoolName="Institute of Aeronautical Engineering" schoolLocation="Hyderabad, Telangana, India" cardType={1} />
-              <EducationCard duration="2019-2021" type="Intermediate" course="Science (MPC)" schoolName="Narayana Junior College" schoolLocation="Hyderabad, Telangana, India" cardType={2} />
+            <section className='pt-10 md:mx-auto max-w-7xl px-4 sm:px-10 md:px-8 flex flex-col justify-center' id='education' >
+              <div className='text-center mb-7'>
+                <GradientText text="Education" className="tracking-wide font-bold text-[38px] text-center mb-6" tag="span" />
+              </div>
+              <div className='grid gap-y-4 grid-cols-1 md:grid-cols-2 gap-x-4'>
+
+                <EducationCard duration="2021-2025" type="Graduation" degree="Bachelor's Degree" degreeType="B-Tech" course="Computer Science Engineering" schoolName="Institute of Aeronautical Engineering" schoolLocation="Hyderabad, Telangana, India" cardType={1} />
+                <EducationCard duration="2019-2021" type="High School" degree="Intermediate" course="Science (MPC)" schoolName="Narayana Junior College" schoolLocation="Hyderabad, Telangana, India" cardType={2} />
+              </div>
             </section>
 
             <section className='pt-10 md:mx-auto max-w-7xl px-4 sm:px-10 md:px-8'>

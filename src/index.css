@@ -23,6 +23,7 @@ html {
   --project-name: #d2d2d3;
   --project-info: #a3a4a5;
   --nav-hover: #161513;
+  --education-card-primary: #24221f;
 }
 .light-mode {
   --black-primary: #f0f2f5;
@@ -34,4 +35,5 @@ html {
   --project-name: #161513;
   --project-info: #868e96;
   --nav-hover: #d3d3d3;
+  --education-card-primary: #c3c3c3;
 }
