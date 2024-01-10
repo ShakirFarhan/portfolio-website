@@ -156,25 +156,7 @@ function Home() {
 
               </div>
             </section>
-            <section className='md:mx-auto max-w-7xl pt-20 px-4 sm:px-10 md:px-8' id='projects' data-aos="zoom-out-up">
-              <h2 className="font-bold tracking-[0.6px] text-center text-[33px] md:text-[40px] leading-[33px] sm:leading-0 pb-3 md:pl-2 mb-9">
-                <GradientText text="Selected Projects" tag="span" />
-              </h2>
-              <div className='flex flex-col gap-y-5'>
 
-                {
-                  projects.map((project, index) => {
-                    return (
-                      <ProjectCard id={index + 1} projectName={project.name} coverImage={project.coverImage} projectDescription={project.description} technologies={project.technologies} workedOn={project.workedOn} link={project.link} />
-                    )
-                  })
-                }
-              </div>
-              <div className='flex items-center justify-center w-full mt-8'>
-                <button className='bg-[#feb901] transition ease duration-400 text-[var(--black-primary)] py-4 px-7 rounded-[30px] hover:bg-[#d39f0f]'><a className='flex items-center justify-center gap-x-2 text-[19px] font-bold' target='_blanck' href='https://github.com/ShakirFarhan'><FaGithub className='text-[25px]' /> See Github</a></button>
-              </div>
-
-            </section>
 
 
             <section className='pt-10 md:mx-auto max-w-7xl px-4 sm:px-10 md:px-8 flex flex-col justify-center' id='education' >
@@ -214,7 +196,25 @@ function Home() {
               </div>
             </section>
 
+            <section className='md:mx-auto max-w-7xl pt-20 px-4 sm:px-10 md:px-8' id='projects' data-aos="zoom-out-up">
+              <h2 className="font-bold tracking-[0.6px] text-center text-[33px] md:text-[40px] leading-[33px] sm:leading-0 pb-3 md:pl-2 mb-9">
+                <GradientText text="Selected Projects" tag="span" />
+              </h2>
+              <div className='flex flex-col gap-y-5'>
 
+                {
+                  projects.map((project, index) => {
+                    return (
+                      <ProjectCard id={index + 1} projectName={project.name} coverImage={project.coverImage} projectDescription={project.description} technologies={project.technologies} workedOn={project.workedOn} link={project.link} />
+                    )
+                  })
+                }
+              </div>
+              <div className='flex items-center justify-center w-full mt-8'>
+                <button className='bg-[#feb901] transition ease duration-400 text-[var(--black-primary)] py-4 px-7 rounded-[30px] hover:bg-[#d39f0f]'><a className='flex items-center justify-center gap-x-2 text-[19px] font-bold' target='_blanck' href='https://github.com/ShakirFarhan'><FaGithub className='text-[25px]' /> See Github</a></button>
+              </div>
+
+            </section>
 
             <Contact />
             <TopArrow />
