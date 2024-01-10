@@ -1,6 +1,23 @@
 import elitceler from '../assets/elitceler.svg';
 import ivoyant from '../assets/ivoyant-logo.png';
 import nfc from '../assets/nfclogo.png';
+import react from '../assets/react.png';
+import redux from '../assets/redux.png';
+import node from '../assets/node.png';
+import express from '../assets/express.png';
+import mongodb from '../assets/mongodb.png';
+import tailwind from '../assets/tailwindcss.svg';
+import jwt from '../assets/jwt.svg';
+import socketio from '../assets/socketio.svg';
+import oauth from '../assets/oauth.svg';
+import chat from '../assets/chat.svg';
+import blogging from '../assets/blogging.svg';
+import javascript from '../assets/javascript.png';
+import git from '../assets/git.png';
+import youtube from '../assets/youtube.svg';
+import rapid from '../assets/rapidapi.svg';
+// import tailwind from "../assets/t"
+
 export const nfcInfo = [
   {
     key: 1,
@@ -116,5 +133,132 @@ export const experiences = [
     role: 'Front End Developer Intern',
     duration: 'JUNE 2022 - DEC 2022',
     description: nfcInfo,
+  },
+];
+
+export const projects = [
+  {
+    id: '1',
+    name: 'RealTime Chat',
+    coverImage: chat,
+    workedOn: ['Website'],
+    technologies: [
+      {
+        logo: javascript,
+        name: 'Javascript',
+      },
+      {
+        logo: react,
+        name: 'React.js',
+      },
+      {
+        logo: redux,
+        name: 'Redux',
+      },
+      {
+        logo: tailwind,
+        name: 'Tailwind CSS',
+      },
+
+      {
+        logo: node,
+        name: 'Node.js',
+      },
+      {
+        logo: express,
+        name: 'Express.js',
+      },
+      {
+        logo: mongodb,
+        name: 'MongoDB',
+      },
+      {
+        logo: socketio,
+        name: 'Socket.io',
+      },
+      {
+        logo: jwt,
+        name: 'JWT',
+      },
+      {
+        logo: oauth,
+        name: 'Google OAuth',
+      },
+      {
+        logo: git,
+        name: 'Git',
+      },
+    ],
+    link: 'https://talk-time.netlify.app/',
+  },
+  {
+    id: '2',
+    name: 'Blogging Website',
+    coverImage: blogging,
+    workedOn: ['Website'],
+    technologies: [
+      {
+        logo: javascript,
+        name: 'Javascript',
+      },
+      {
+        logo: react,
+        name: 'React.js',
+      },
+      {
+        logo: node,
+        name: 'Node.js',
+      },
+      {
+        logo: express,
+        name: 'Express.js',
+      },
+      {
+        logo: mongodb,
+        name: 'MongoDB',
+      },
+      {
+        logo: jwt,
+        name: 'JWT',
+      },
+      {
+        logo: git,
+        name: 'Git',
+      },
+    ],
+    link: 'youtu.be/3OosYaPqqdA',
+  },
+  {
+    id: '3',
+    name: 'Youtube Clone',
+    coverImage: youtube,
+    workedOn: ['Website'],
+    technologies: [
+      {
+        logo: javascript,
+        name: 'Javascript',
+      },
+      {
+        logo: react,
+        name: 'React.js',
+      },
+      {
+        logo: redux,
+        name: 'Redux',
+      },
+      {
+        logo: tailwind,
+        name: 'Tailwind CSS',
+      },
+      {
+        logo: git,
+        name: 'Git',
+      },
+      {
+        logo: rapid,
+        name: 'Rapid API',
+      },
+    ],
+    link: 'https://youtubeclone-farhan.netlify.app',
   },
 ];

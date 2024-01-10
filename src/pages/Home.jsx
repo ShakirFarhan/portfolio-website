@@ -20,12 +20,7 @@ import mongodb from "../assets/mongodb.png"
 import postgres from "../assets/postgres.png"
 import ImageFrame from '../components/ImageFrame'
 import GradientText from '../components/GradientText'
-import ProjectCard from '../components/ProjectCard'
-import metadata from "../assets/metadata.svg"
-import chat from "../assets/chat.svg"
-import blog from "../assets/blog.svg"
-import youtube from "../assets/youtube.svg"
-import { experiences } from '../constants/info'
+import { experiences, projects } from '../constants/info'
 import Contact from './Contact'
 import Navbar from '../components/Navbar'
 import TopArrow from '../assets/TopArrow'
@@ -33,6 +28,8 @@ import Footer from '../components/Footer'
 import Loading from '../components/Loading'
 import EducationCard from '../components/EducationCard'
 import ExperienceCard from '../components/ExperienceCard'
+import ProjectCard from '../components/ProjectCard'
+import { FaGithub } from "react-icons/fa"
 function Home() {
   const [mode, setMode] = useState("dark")
   const [isLoading, setIsLoading] = useState(true);
@@ -96,23 +93,15 @@ function Home() {
                 <p className='text-[var(--white-primary)] text-[11.5px] font-medium tracking-wide'>Along with that, I am an active participant in communities as a lead and member. Because I think it's important to share knowledge and learn from others, I've been able to keep up with the most recent business trends and best practises.</p>
                 <div className='flex flex-col items-start gap-y-3 sm:flex-row sm:items-center sm:gapy-0 sm:gap-x-16'>
                   <div>
-
-
                     <GradientText tag="span" style={{ fontWeight: "700", fontSize: "12px", letterSpacing: "0.6px" }} text="PROJECTS DONE" />
-
                     <p className='font-bold text-[29px] text-[var(--white-primary)]'>14+</p>
                   </div>
                   <div>
-
-
                     <GradientText tag="span" style={{ fontWeight: "700", fontSize: "12px", letterSpacing: "0.6px" }} text="EXPERIENCE" />
-
                     <p className='font-bold text-[29px] text-[var(--white-primary)]'>1 Year</p>
                   </div>
                   <div>
-
                     <GradientText tag="span" style={{ fontWeight: "700", fontSize: "12px", letterSpacing: "0.6px" }} text="CLIENTS SATISFACTION" />
-
                     <p className='font-bold text-[29px] text-[var(--white-primary)]'>100%</p>
                   </div>
                 </div>
@@ -168,21 +157,23 @@ function Home() {
               </div>
             </section>
             <section className='md:mx-auto max-w-7xl pt-20 px-4 sm:px-10 md:px-8' id='projects' data-aos="zoom-out-up">
-              <h2 className="font-bold tracking-[0.6px] text-[33px] md:text-[40px] leading-[33px] sm:leading-0 pb-3 md:pl-2">
-
+              <h2 className="font-bold tracking-[0.6px] text-center text-[33px] md:text-[40px] leading-[33px] sm:leading-0 pb-3 md:pl-2 mb-9">
                 <GradientText text="Selected Projects" tag="span" />
               </h2>
-              <p className='text-[#f0f2f5] text-[13.5px] font-medium tracking-wide w-[94%] md:w-[45%] lg:w-[35%] md:pl-2' >Printer took a galley of type and scrambled it to make a type specimen book. It has survived</p>
+              <div className='flex flex-col gap-y-5'>
 
-              <div className='py-3 flex items-center gap-x-10 overflow-x-scroll project-section pl-2'>
-                <ProjectCard name="Real Time Chat Application" className="bg-[#FFFF00]" language="Javascript" info="The Real-Time Messaging App is a dynamic website built using the MERN stack, consisting of MongoDB, Express, React, and Node.js...." image={chat} link="https://github.com/ShakirFarhan/Realtime-Chat" />
-                <ProjectCard name="Youtube Clone" language="Javascript" className="bg-[#FFFF00]" info="A YouTube clone built using React JS, Redux, Tailwind CSS, and a Rapid API." image={youtube} link="https://github.com/ShakirFarhan/Youtube-Clone" />
-                <ProjectCard name="Blogging Website" language="Javascript" className="bg-[#FFFF00]" info="A comprehensive blogging website built using MERN Stack that includes all of the functionality that a modern blogging website should have..." image={blog} link="https://github.com/ShakirFarhan/Blogging-Website" />
-                <ProjectCard name="Metadata Extractor" language="Typescript" className="bg-[#0076c6]" info="The Database Metadata Extractor is a API that aims to simplify the process of querying data from Postgres databases. This project provides..." image={metadata} link="https://github.com/ShakirFarhan/Metadata-Extractor" />
-                <div className='flex items-center'>
-                  <a className='text-[var(--white-primary)] text-center font-bold tracking-wide' target='_blank' rel="noreferrer" href='https://github.com/ShakirFarhan?tab=repositories'>MORE PROJECTS</a>
-                </div>
+                {
+                  projects.map((project, index) => {
+                    return (
+                      <ProjectCard id={index + 1} projectName={project.name} coverImage={project.coverImage} projectDescription={project.description} technologies={project.technologies} workedOn={project.workedOn} link={project.link} />
+                    )
+                  })
+                }
               </div>
+              <div className='flex items-center justify-center w-full mt-8'>
+                <button className='bg-[#feb901] transition ease duration-400 text-[var(--black-primary)] py-4 px-7 rounded-[30px] hover:bg-[#d39f0f]'><a className='flex items-center justify-center gap-x-2 text-[19px] font-bold' target='_blanck' href='https://github.com/ShakirFarhan'><FaGithub className='text-[25px]' /> See Github</a></button>
+              </div>
+
             </section>
 
 

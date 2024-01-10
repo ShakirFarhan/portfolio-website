@@ -1,33 +1,74 @@
-import React from 'react'
-import "../css/projectcard.css"
-function ProjectCard({ name, info, language, image, link, className }) {
+import React, { useEffect, useState } from 'react'
+import { BsInfoLg } from "react-icons/bs"
+import { Link } from 'react-router-dom'
+import { IoIosLink } from "react-icons/io"
+const ProjectCard = ({ projectName, workedOn, technologies, link, projectDescription, coverImage, id }) => {
+  const [colors, setColors] = useState([])
 
+  useEffect(() => {
+
+    if (id === 1) {
+      setColors(["#102762", "#1766df"])
+    } else if (id === 2) {
+      setColors(["#830332", "#df94af"])
+    } else {
+      setColors(["#3f031b", "#851842"])
+    }
+  }, [id])
 
   return (
-
-
-    <div className='min-w-[360px] h-[320px]  md:min-w-[500px] bg-[var(--project-card)] flex flex-col shadow-lg rounded-[10px] md:h-[350px] p-2 project-card duration-500 easein-out'>
-      <a className='w-full' target='_blanck' href={link}>
-        <div>
-          <img className='w-full bg-[#fff] object-contain h-[180px] md:h-[230px] rounded-[10px]' src={image} alt='Project' />
+    <div style={{ background: colors[0] }} className={`w-full h-[fit-content] px-4 p-3 rounded-[25px]`}>
+      <div className={`flex items-center justify-between gap-y-5 lg:gap-x-6  flex-col lg:flex-row`}>
+        <div style={{ background: colors[1] }} className={`w-[100%] lg:w-[47%] mt-1 lg:mt-0 max-h-[360px] lg:max-h-[430px] lg:h-[420px] p-4 rounded-[25px] overflow-hidden`}>
+          <img className='w-[100%] h-[100%] object-contain' src={coverImage} alt='Project' />
         </div>
-        <div className='pl-2 pt-3 flex flex-col items-start gap-y-2'>
-
-          <div className='flex flex-col gap-y-[5px]'>
-            <h5 className='text-[var(--project-name)] font-semibold tracking-wide text-[13.8px]'>{name}</h5>
-            <p className='text-[var(--project-info)] text-[12px] font-medium tracking-wide'>{info}</p>
+        <div className='w-[100%] lg:w-[50%]'>
+          <div className='flex items-center justify-between'>
+            <h2 className='text-[34px] sm:text-[40px] font-bold text-[#fff]'>{projectName}</h2>
+            <div className='w-[45px] h-[45px] sm:w-[55px] sm:h-[55px] rounded-[50%] flex items-center justify-center bg-[#fff] p-2'>
+              <BsInfoLg style={{ color: colors[0] }} className={`text-[29px] sm:text-[33px]`} />
+            </div>
           </div>
-          <div className='flex items-center gap-x-2'>
-
-            <div className={`w-[8px] h-[8px] ${className} rounded-[50%]`}>
+          <div className=''>
+            <p className='text-[#fff] text-[16px] sm:text-[17px] font-medium'>Worked on</p>
+            <div className='flex items-center gap-x-3 my-3'>
+              {
+                workedOn.map((work, index) => {
+                  return (
+                    <div key={index} className='bg-[#fff] bg-opacity-30 w-[fit-content] px-5 py-[7px] font-bold text-[15px] tracking-wide text-[#fff] rounded-[20px]'>
+                      {work}
+                    </div>
+                  )
+                })
+              }
 
             </div>
-
-            <p className='text-[var(--white-primary)] text-[14px]'>{language}</p>
+            <p className='text-[#fff] text-[16px] sm:text-[17px] font-medium'>Technologies I have used</p>
+            <div className='flex items-center flex-wrap gap-x-2 gap-y-3 my-4 lg:max-h-[160px] w-[100%] sm:w-[86%] lg:w-[100%]'>
+              {
+                technologies.map((tech) => {
+                  return (
+                    <div key={tech.name} className='bg-[#fff] w-[fit-content] px-3 py-[7px] font-bold rounded-[20px] flex items-center gap-x-2'>
+                      <img className='w-[24px] h-[22px]' src={tech.logo} alt='Javascript' />
+                      <p className='font-semibold text-[14.5px] text-[#0c0c0c]'>{tech.name}</p>
+                    </div>
+                  )
+                })
+              }
+            </div>
+            <div className=''>
+              <button className='mt-3'>
+                <a target='_blanck' href={link} className='text-[#fff] font-semibold text-[20.5px] sm:text-[23px] flex items-center gap-x-2 bg-[#fff] bg-opacity-10 hover:bg-[#fff] hover:text-[#000] transition duration-300 border-[#fff] border-[1.4px] py-2 px-5 rounded-[32px]'>
+                  <IoIosLink className='text-[28px]' />
+                  Go To {projectName}
+                </a>
+              </button>
+            </div>
           </div>
-
         </div>
-      </a>
+      </div>
+      <div>
+      </div>
     </div>
   )
 }
