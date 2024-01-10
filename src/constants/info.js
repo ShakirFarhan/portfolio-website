@@ -16,27 +16,76 @@ export const nfcInfo = [
   },
   {
     key: 5,
+    text: 'Implemented responsive design principles, ensuring optimal user experiences across various devices and screen sizes.',
+  },
+  {
+    key: 6,
+
+    text: 'Engaged in code reviews, providing constructive feedback and adhering to best practices to maintain code quality and consistency.',
+  },
+  {
+    key: 7,
+
+    text: 'Participated in user testing and feedback sessions, refining features based on user input and contributing to a user-centric development approach.',
+  },
+  {
+    key: 8,
     text: 'Gained valuable hands-on experience with relevant technologies and received positive feedback for my work and learning ability.',
   },
 ];
 export const ivoyantInfo = [
   {
     key: 1,
-    text: 'Collaborating with a team of talented software engineers, I actively participated in the development and maintenance of software applications.',
+    text: 'Played a key role in developing a dynamic decision table component, contributing to its functionality and optimizing user interactions.',
   },
   {
     key: 2,
-    text: 'With a desire for continuous learning, I jumped at the chance to learn about new technologies and programming frameworks. ',
+    text: 'Implemented key features, optimizing user interactions and decision-making processes.',
+  },
+  {
+    key: 3,
+    text: 'Contributed to the design and implementation of a metadata extractor, streamlining data retrieval and organization.',
+  },
+  {
+    key: 4,
+
+    text: 'Worked closely with a senior developers, gaining valuable insights and guidance in the intricacies of software development.',
+  },
+  {
+    key: 5,
+
+    text: 'Utilized languages and frameworks such as TypeScript, React.js, Nest.js, PostgreSQL, Zustand and Unit Testing  for the development of software applications.',
+  },
+  {
+    key: 6,
+
+    text: 'Collaborated in the design and documentation of software architectures, ensuring clarity and maintainability of codebases.',
   },
 ];
 export const elitcelerInfo = [
   {
+    key: 0,
+    text: "Successfully delivered four projects Till date. This includes the development of custom backend solutions tailored to each client's unique requirements",
+  },
+  {
     key: 1,
-    text: 'Offering full-stack development services to clients, specializing in MERN stack, React Native, GraphQL,PostgresSQL, NestJS.',
+    text: 'Designed and implemented scalable backend architectures, ensuring optimal performance and flexibility to accommodate future growth',
   },
   {
     key: 2,
-    text: 'Leveraging expertise in front-end and back-end development to design and develop user-friendly interfaces and robust server-side functionalities.',
+    text: 'Demonstrated proficiency in a range of technologies, including  Node.js, Express.js, MongoDb, Redis, AWS S3, Docker to create robust and efficient backend systems',
+  },
+  {
+    key: 3,
+    text: 'Successfully navigated through different project categories, demonstrating adaptability and a deep understanding of unique industry requirements. Projects ranged from Ed-Tech, E-Commerce, healthcare and Service Marketplace] showcasing versatility and a broad skill set',
+  },
+  {
+    key: 4,
+    text: 'Worked closely with cross-functional teams, including frontend developers(App & Web), QA engineers and Devops Engineer',
+  },
+  {
+    key: 5,
+    text: 'Established a reputation for delivering projects on time and within budget, leading to high levels of client satisfaction and positive testimonials',
   },
 ];
 

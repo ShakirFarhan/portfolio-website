@@ -6,6 +6,7 @@ function ExperienceCard({ color, companyname, companylogo, role, duration, point
   )
   return (
     <div className='relative h-fit pb-4 md:pb-0 md:h-[630px] lg:h-[664px] xl:h-[630px] bg-[var(--black-primary)] rounded-[10px] overflow-hidden border-[1px] border-[#808080]'>
+
       <div style={{ backgroundColor: color }} className={`h-[170px] bg-[${color}]`}>
 
       </div>

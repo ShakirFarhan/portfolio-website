@@ -1,9 +1,27 @@
 .hover__card {
-  background: radial-gradient(circle, rgba(250, 234, 191, 1) 0%, #c2c2c2 38%);
-  transition: background 1s all;
-  cursor: pointer;
+  background: #c2c2c2;
+  transition: background 0.5s ease-in-out;
 }
-
 .hover__card:hover {
   background: #fff;
+}
+
+.hover__card > :nth-child(1) {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(250, 234, 191, 1) 0%, #c2c2c2 38%);
+  transition: 0s;
+}
+.hover__card:hover > :nth-child(1) {
+  background: transparent;
+}
+
+.hover__card:hover .honey__hover {
+  background: #fcefcc;
+}
+.hover__card:hover .subdegree {
+  background: #e7e7e7;
+}
+.hover__card:hover .icons {
+  background: #fcefcc;
 }
