@@ -32,7 +32,7 @@ import TopArrow from '../assets/TopArrow'
 import Footer from '../components/Footer'
 import Loading from '../components/Loading'
 import EducationCard from '../components/EducationCard'
-import ExperienceCard from '../components/Experience/ExperienceCard'
+import ExperienceCard from '../components/ExperienceCard'
 function Home() {
   const [mode, setMode] = useState("dark")
   const [isLoading, setIsLoading] = useState(true);
