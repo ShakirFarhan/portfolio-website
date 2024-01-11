@@ -80,7 +80,7 @@ function Navbar({ setMode, mode }) {
                   Contact
                 </a>
               </li>
-
+              <span></span>
               <button className='pl-3 mt-3 md:mt-0' onClick={handleToggleMode}>
 
 
