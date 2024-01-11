@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { BsInfoLg } from "react-icons/bs"
-import { Link } from 'react-router-dom'
 import { IoIosLink } from "react-icons/io"
 const ProjectCard = ({ projectName, workedOn, technologies, link, projectDescription, coverImage, id }) => {
   const [colors, setColors] = useState([])
@@ -25,7 +24,7 @@ const ProjectCard = ({ projectName, workedOn, technologies, link, projectDescrip
         <div className='w-[100%] lg:w-[50%]'>
           <div className='flex items-center justify-between'>
             <h2 className='text-[34px] sm:text-[40px] font-bold text-[#fff]'>{projectName}</h2>
-            <div className='w-[45px] h-[45px] sm:w-[55px] sm:h-[55px] rounded-[50%] flex items-center justify-center bg-[#fff] p-2'>
+            <div className='w-[45px] h-[45px] sm:w-[55px] sm:h-[55px] rounded-[50%] flex items-center justify-center bg-[#fff] p-2 hover:cursor-pointer transition ease duration-500 hover:bg-[#d2d2d3]'>
               <BsInfoLg style={{ color: colors[0] }} className={`text-[29px] sm:text-[33px]`} />
             </div>
           </div>

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
 body {
@@ -23,7 +23,10 @@ html {
   --project-name: #d2d2d3;
   --project-info: #a3a4a5;
   --nav-hover: #161513;
-  --education-card-primary: #24221f;
+  --card-primary: #c3c3c3;
+  --card-secondary: rgba(250, 234, 191, 1);
+  --experience-card-color1: #161513;
+  --experience-card-color2: #feb901;
 }
 .light-mode {
   --black-primary: #f0f2f5;
@@ -35,5 +38,8 @@ html {
   --project-name: #161513;
   --project-info: #868e96;
   --nav-hover: #d3d3d3;
-  --education-card-primary: #c3c3c3;
+  --card-primary: #545454;
+  --card-secondary: #543f09;
+  --experience-card-color1: #feb901;
+  --experience-card-color2: #161513;
 }

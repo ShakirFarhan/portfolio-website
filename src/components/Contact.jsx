@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import GradientText from '../components/GradientText'
+import GradientText from './GradientText'
 import { MdEmail } from "react-icons/md"
 import emailjs from '@emailjs/browser';
 import "../css/contact.css"
@@ -55,8 +55,6 @@ function Contact() {
       toast.warning("Enter your Full Name")
     }
     else {
-
-
       emailjs.sendForm("service_m4xhl8o", "template_6pr54rn", form.current, "d4tm2qCA1xen6WSk6")
         .then((result) => {
           toast.success("Email Sent👍", {
@@ -64,6 +62,7 @@ function Contact() {
           })
           setFormData(defaultFormValue)
         }, (error) => {
+          console.log(error)
           toast.error("Something Went Wrong. Try Again!", {
             style: toastContainer,
           })

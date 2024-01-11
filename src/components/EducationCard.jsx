@@ -7,11 +7,11 @@ import location from "../assets/location.png"
 
 const EducationCard = ({ duration, type, degree, degreeType, course, schoolName, schoolLocation, cardType }) => {
   return (
-    <div className={`w-[100%] bg-[#c2c2c2] rounded-[20px] h-[fit-content] sm:h-[300px] lg:h-[350px] xl:h-[320px] ${styles.hover__card}`}>
+    <div className={`w-[100%]  rounded-[20px] h-[fit-content] sm:h-[300px] lg:h-[350px] xl:h-[320px] ${styles.hover__card}`}>
       <div className='p-4 lg:p-7 rounded-[20px]'>
         <div className='flex items-center justify-between flex-wrap gap-y-3'>
           <div className={`flex items-center gap-x-3 bg-[var(--black-primary)] px-2 sm:px-5 py-[5px] sm:py-[7px] text-[14.5px] lg:text-[17.4px] rounded-[50px] text-[#efae02] font-bold tracking-wider`}><IoCalendarOutline className='text-xl' />{duration}</div>
-          <div className={`flex items-center gap-x-3 bg-[var(--white-primary)] px-2 sm:px-5 py-[5px] sm:py-[7px] text-[14.5px] lg:text-[17.4px] rounded-[50px] text-[var(--black-primary)] font-bold trackin-wider ${styles.honey__hover}`}><img className='w-[20px] h-[20px]' src={graduationImg} />{type}</div>
+          <div className={`flex items-center gap-x-3 bg-[var(--white-primary)] px-2 sm:px-5 py-[5px] sm:py-[7px] text-[14.5px] lg:text-[17.4px] rounded-[50px] text-[var(--black-primary)] font-bold trackin-wider ${styles.honey__hover}`}><img className='w-[20px] h-[20px]' alt='Grauduation' src={graduationImg} />{type}</div>
         </div>
         <div className='flex items-center gap-x-3 my-5'  >
           {degree && <div className={`flex items-center gap-x-3 bg-[var(--white-primary)] px-2 sm:px-5 py-[4px] sm:py-[6px] text-[15.5px] lg:text-[18.4px] rounded-[50px] text-[var(--black-primary)] font-bold ${styles.subdegree}`}>{degree}</div>}
@@ -35,6 +35,7 @@ const EducationCard = ({ duration, type, degree, degreeType, course, schoolName,
         </div>
       </div>
     </div>
+
   )
 }
 

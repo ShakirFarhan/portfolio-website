@@ -16,6 +16,29 @@ import javascript from '../assets/javascript.png';
 import git from '../assets/git.png';
 import youtube from '../assets/youtube.svg';
 import rapid from '../assets/rapidapi.svg';
+import java from '../assets/java.png';
+import html from '../assets/html.png';
+import css from '../assets/css.png';
+
+import typescript from '../assets/typescript.png';
+
+import aws from '../assets/aws.svg';
+import postman from '../assets/postman.svg';
+
+import docker from '../assets/docker.png';
+import github from '../assets/github.png';
+
+import nextjs from '../assets/nest.svg';
+import redis from '../assets/redis.svg';
+import graphql from '../assets/graphql.svg';
+import zustand from '../assets/zustand.png';
+import python from '../assets/python.png';
+
+import nest from '../assets/nest.svg';
+
+import postgres from '../assets/postgres.png';
+import vscode from '../assets/vscode.svg';
+import notion from '../assets/notion.svg';
 // import tailwind from "../assets/t"
 
 export const nfcInfo = [
@@ -226,7 +249,7 @@ export const projects = [
         name: 'Git',
       },
     ],
-    link: 'youtu.be/3OosYaPqqdA',
+    link: 'https://youtu.be/3OosYaPqqdA',
   },
   {
     id: '3',
@@ -260,5 +283,116 @@ export const projects = [
       },
     ],
     link: 'https://youtubeclone-farhan.netlify.app',
+  },
+];
+
+export const frontend = [
+  {
+    logo: html,
+    name: 'HTML',
+  },
+  {
+    logo: css,
+    name: 'CSS',
+  },
+  {
+    logo: javascript,
+    name: 'Javascript',
+  },
+  {
+    logo: typescript,
+    name: 'Typescript',
+  },
+  {
+    logo: react,
+    name: 'React.js',
+  },
+  {
+    logo: nextjs,
+    name: 'Next.js',
+  },
+  {
+    logo: react,
+    name: 'React Native',
+  },
+  {
+    logo: redux,
+    name: 'Redux',
+  },
+  {
+    logo: zustand,
+    name: 'Zustand',
+  },
+  {
+    logo: tailwind,
+    name: 'Tailwind CSS',
+  },
+];
+export const backend = [
+  {
+    logo: node,
+    name: 'Node.js',
+  },
+  {
+    logo: express,
+    name: 'Express.js',
+  },
+  {
+    logo: nest,
+    name: 'Nest.js',
+  },
+  {
+    logo: graphql,
+    name: 'GraphQL',
+  },
+  {
+    logo: mongodb,
+    name: 'MongoDB',
+  },
+  {
+    logo: postgres,
+    name: 'PostgreSQL',
+  },
+  {
+    logo: aws,
+    name: 'AWS',
+  },
+  {
+    logo: redis,
+    name: 'Redis',
+  },
+  {
+    logo: docker,
+    name: 'Docker',
+  },
+];
+export const other = [
+  {
+    logo: java,
+    name: 'Java',
+  },
+  {
+    logo: python,
+    name: 'Python',
+  },
+  {
+    logo: git,
+    name: 'Git',
+  },
+  {
+    logo: github,
+    name: 'Github',
+  },
+  {
+    logo: postman,
+    name: 'Postman',
+  },
+  {
+    logo: vscode,
+    name: 'VS Code',
+  },
+  {
+    logo: notion,
+    name: 'Notion',
   },
 ];
