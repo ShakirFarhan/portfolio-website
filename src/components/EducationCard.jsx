@@ -7,7 +7,8 @@ import location from "../assets/location.png"
 
 const EducationCard = ({ duration, type, degree, degreeType, course, schoolName, schoolLocation, cardType }) => {
   return (
-    <div className={`w-[100%]  rounded-[20px] h-[fit-content] sm:h-[300px] lg:h-[350px] xl:h-[320px] ${styles.hover__card}`}>
+    <div className={`w-[100%]  rounded-[20px] h-[fit-content] sm:h-[300px] lg:h-[350px] xl:h-[320px] ${styles.hover__card}`} data-aos="fade-up"
+      data-aos-duration="4000">
       <div className='p-4 lg:p-7 rounded-[20px]'>
         <div className='flex items-center justify-between flex-wrap gap-y-3'>
           <div className={`flex items-center gap-x-3 bg-[var(--black-primary)] px-2 sm:px-5 py-[5px] sm:py-[7px] text-[14.5px] lg:text-[17.4px] rounded-[50px] text-[#efae02] font-bold tracking-wider`}><IoCalendarOutline className='text-xl' />{duration}</div>

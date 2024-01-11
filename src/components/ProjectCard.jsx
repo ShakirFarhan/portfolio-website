@@ -16,7 +16,7 @@ const ProjectCard = ({ projectName, workedOn, technologies, link, projectDescrip
   }, [id])
 
   return (
-    <div style={{ background: colors[0] }} className={`w-full h-[fit-content] px-4 p-3 rounded-[25px]`}>
+    <div style={{ background: colors[0] }} className={`w-full h-[fit-content] px-4 p-3 rounded-[25px]`} data-aos="zoom-in">
       <div className={`flex items-center justify-between gap-y-5 lg:gap-x-6  flex-col lg:flex-row`}>
         <div style={{ background: colors[1] }} className={`w-[100%] lg:w-[47%] mt-1 lg:mt-0 max-h-[360px] lg:max-h-[430px] lg:h-[420px] p-4 rounded-[25px] overflow-hidden`}>
           <img className='w-[100%] h-[100%] object-contain' src={coverImage} alt='Project' />

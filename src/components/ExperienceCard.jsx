@@ -6,7 +6,7 @@ import boy from "../assets/boy.jpg"
 import styles from "../css/educationcard.module.css"
 const ExperienceCard = ({ logo, company, location, role, duration, description }) => {
   return (
-    <div className={`w-full bg-[#fff]  min-h-[fit-content] max-h-[700px] sm:max-h-[550px] rounded-[20px] ${styles.hover__card}`}>
+    <div className={`w-full bg-[#fff]  min-h-[fit-content] max-h-[700px] sm:max-h-[550px] rounded-[20px] ${styles.hover__card}`} data-aos="fade-up">
 
       <div className='p-2 sm:p-4 lg:p-7  rounded-[20px]'>
 
