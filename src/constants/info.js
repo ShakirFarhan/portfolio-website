@@ -28,7 +28,7 @@ import postman from '../assets/postman.svg';
 import docker from '../assets/docker.png';
 import github from '../assets/github.png';
 
-import nextjs from '../assets/nest.svg';
+import nextjs from '../assets/nextjs.svg';
 import redis from '../assets/redis.svg';
 import graphql from '../assets/graphql.svg';
 import zustand from '../assets/zustand.png';
