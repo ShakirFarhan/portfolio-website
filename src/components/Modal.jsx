@@ -17,10 +17,10 @@ const Modal = ({ setModalActive, description }) => {
 
       {/* <!-- Modal --> */}
       <div id="modal" class="modal p-8 rounded-md z-50 fixed w-full h-full top-0 bottom-0 left-0 right-0 flex items-center justify-center">
-        <div className='bg-[#18181b] w-[50%] min-h-[fit-content] max-h-[400px] rounded-[30px] p-5 transition delay-100 ease'>
+        <div className='bg-[var(--black-primary)] w-[50%] min-h-[fit-content] max-h-[400px] rounded-[30px] p-5 transition delay-100 ease'>
           <div className='flex w-full justify-between items-center'>
-            <h2 className='text-white text-[21px] font-bold pl-2'>What I've Done in Project</h2>
-            <div onClick={() => setModalActive(false)} className='text-white w-[40px] h-[40px] flex items-center justify-center hover:bg-[#23272d] rounded-[50%] p-2 cursor-pointer transition ease'>
+            <h2 className='text-[var(--white-primary)] text-[21px] font-bold pl-2'>What I've Done in Project</h2>
+            <div onClick={() => setModalActive(false)} className='text-[var(--white-primary)] w-[40px] h-[40px] flex items-center justify-center hover:bg-[#23272d] rounded-[50%] p-2 cursor-pointer transition ease hover:text-[#fff]'>
               <RxCross2 className='text-[20px]' />
             </div>
           </div>
