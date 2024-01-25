@@ -165,6 +165,17 @@ export const projects = [
     name: 'RealTime Chat',
     coverImage: chat,
     workedOn: ['Website'],
+    description: [
+      'Real-time chat: users can send and receive messages in real-time',
+      'User authentication: users can sign up, log in, and log out using JWT and Google Auth',
+      'Group creation: users can create chat rooms and invite others to join',
+      'Notifications: users can receive notifications on new messages',
+      'Emojis: users can send and receive emojis in messages',
+      ' Profile page where users can update their avatar and display name.',
+      'Users can create a room to chat with others.',
+      ' Search functionality.',
+      'Responsive design: the website is optimized for different screen sizes and devices',
+    ],
     technologies: [
       {
         logo: javascript,
@@ -218,6 +229,14 @@ export const projects = [
     id: '2',
     name: 'Blogging Website',
     coverImage: blogging,
+    description: [
+      'The website offers an intuitive and user-friendly interface for easy navigation and interaction.',
+      'Users can sign up, log in, and log out using JWT',
+      'Users can like, bookmark, follow, and unfollow posts and other users to personalize their experience and engage with content.',
+      'The website is designed to be responsive across various devices and screen sizes, ensuring a seamless browsing experience for users.',
+      'Integrated social sharing functionality allows users to share blog posts and other content across various social media platforms, increasing visibility and reach.',
+      'Profile page where users can update their avatar and display name.',
+    ],
     workedOn: ['Website'],
     technologies: [
       {
@@ -254,6 +273,11 @@ export const projects = [
   {
     id: '3',
     name: 'Youtube Clone',
+    description: [
+      'Users can watch videos with smooth and responsive playback, offering a user experience similar to the original YouTube platform.',
+      'The clone includes a robust search functionality, allowing users to discover and explore a vast library of videos based on keywords, categories, and user preferences.',
+      'Tailwind CSS is utilized to create a responsive and visually appealing design, ensuring the application is optimized for various screen sizes and devices.',
+    ],
     coverImage: youtube,
     workedOn: ['Website'],
     technologies: [
